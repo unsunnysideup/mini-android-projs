@@ -11,6 +11,10 @@ Simple themed calculator app supporting basic operators such as +, −, ×, ÷, 
 ## Tip Calculator App @ 09/30
 Tip calculator that accepts manual bill amount input and returns the total amount based on a selected tip percentage (10%, 15%, or 20%).
 
+<p align="center">
+  <img src="demos/tipcalc-demo.gif" width="200" alt="Demo of the Calculator App">
+</p>
+
 
 
 

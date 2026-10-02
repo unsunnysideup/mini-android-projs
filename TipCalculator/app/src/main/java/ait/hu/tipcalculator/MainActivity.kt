@@ -187,26 +187,44 @@ fun TipCalculate(modifier: Modifier = Modifier) {
 
             var result by remember { mutableStateOf("Total Payment: $0.00") }
 
-            Button(onClick = {
+           Row(modifier = Modifier
+                .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center) {
+                Button(
+                    onClick = {
 
-                try{
-                val res = (((number.toDouble() * (1+(selectedOption.substring(0,2).toDouble())/100))*100).toInt()/100.0)
-                result = "Total Payment: $$res"
-                } catch (e: NumberFormatException) {
-                    if (number == "") {
-                        result = "Total Payment: $0.00"
-                    } else {
-                        result = "Inappropriate Input"
-                    }
+                        try {
+                            val res = (((number.toDouble() * (1 + (selectedOption.substring(0, 2)
+                                .toDouble()) / 100)) * 100).toInt() / 100.0)
+                            result = "Total Payment: $$res"
+                        } catch (e: NumberFormatException) {
+                            result = if (number == "") {
+                                "Total Payment: $0.00"
+
+                            } else {
+                                "Inappropriate Input"
+                            }
+                        }
+
+
+                    },
+                    shape = RectangleShape,
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xff7e3285)),
+                    modifier = Modifier.padding(horizontal = 10.dp)
+                ) {
+                    Text("CALCULATE", fontWeight = FontWeight.SemiBold)
                 }
 
-
-            },
-                Modifier.padding(horizontal = 125.dp)
-                    .fillMaxWidth(),
-                shape = RectangleShape,
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xff7e3285))) {
-                Text("CALCULATE", fontWeight = FontWeight.SemiBold)
+                Button(
+                    onClick = {
+                        number = ""
+                        result = "Total Payment: $0.00"
+                    },
+                    shape = RectangleShape,
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray)
+                ) {
+                    Text("CLEAR", fontWeight = FontWeight.SemiBold)
+                }
             }
 
             Text(text = result,
