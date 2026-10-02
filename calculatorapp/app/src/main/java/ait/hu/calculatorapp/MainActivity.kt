@@ -202,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                 } else if (equation.contains("÷")) {
                     try {
                         result = (n[0].toDouble() / n[1].toDouble()).toBigDecimal()
-                    } catch (e: ArithmeticException) {
+                    } catch (e: NumberFormatException) {
                         divideZero = true
                     }
                 } else if (equation.contains("^")) {
