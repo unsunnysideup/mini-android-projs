@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">minesweeper</string>
+    <string name="flag">⛳️</string>
+    <string name="restart">New Game</string>
+    <string name="mode_hard">Hard</string>
+    <string name="mode_medium">Medium</string>
+    <string name="mode_easy">Easy</string>
+    <string name="lose_message">Game Lost 💀 Try Again?</string>
+    <string name="win_message">Game Won 🏆 New Game? </string>
+    <string name="info_panel">"%1$s | %2$s | "</string>
+    <string name="game_title">Minesweeper 💥</string>
+</resources>

@@ -16,5 +16,10 @@ Tip calculator that accepts manual bill amount input and returns the total amoun
 </p>
 
 
+## Minesweeper App @ 10/13
+This minesweeper app supports the basic functionality of a classical minesweeper game, where you click on fields to reveal hints where potential bombs are located and flag fields where you think the bombs are placed. Additionally, this app allows for replay and offers three modes of difficulty. 
 
+<p align="center">
+  <img src="demos/minesweeper-demo.gif" width="200" alt="Demo of the Minesweeper App">
+</p>
 
